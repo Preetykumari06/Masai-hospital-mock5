@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="./Dashboard.css">
+</head>
+
+<body>
+    <div>
+
+        <h1>Masai Hospital</h1>
+
+        <div class="logoutBtnSection">
+            <button type="button" data-toggle="modal" data-target="#addModal" data-whatever="@mdo">Add Doctor</button>
+            <button onclick="logoutBtn()">Logout</button>
+        </div>
+
+        <div class="filterSection">
+
+            <input type="text" placeholder="search here" id="searchName" name="name">
+
+            <select id="filterSpecialization" name="Specialization">
+                <option value="">Filter By Specialization</option>
+                <option value="Cardiologist">Cardiologist</option>
+                <option value=" Dermatologist"> Dermatologist</option>
+                <option value="Pediatrician">Pediatrician</option>
+                <option value="Psychiatrist">Psychiatrist</option>
+            </select>
+            
+            <select id="filterDate" name="sortbydate">
+                <option value="">Filter By Date</option>
+                
+            </select>
+            
+
+        </div>
+
+        <div>
+
+            <table border="1" cellspacing="0">
+
+        
+
+                <tbody id="tbodyEmployee">
+
+                    <!-- append employee here -->
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <div class="paginationBtns">
+            <button onclick="changePageNumber(-1)">Prev</button>
+            <span id="pageNumberSpan">1</span>
+            <button onclick="changePageNumber(1)">Next</button>
+        </div>
+
+    </div>
+
+
+   
+
+</body>
+
+</html>
+
+
+
+<script src="./Dashboard.js"></script>
