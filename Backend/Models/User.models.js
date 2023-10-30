@@ -1,8 +1,8 @@
 const mongoose=require('mongoose')
 
 const UserSchema=mongoose.Schema({
-    email: {type:String,required:true},
-    password: {type:String,required:true}
+    Email: {type:String,required:true},
+    Password: {type:String,required:true}
 });
 
 const UserModel=mongoose.model('user', UserSchema);
