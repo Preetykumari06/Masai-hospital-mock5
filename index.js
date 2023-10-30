@@ -1,6 +1,9 @@
 const express=require("express");
 const CORS=require('cors');
 const {connection}=require("./Backend/Config/db");
+const { UserRouter } = require("./Backend/Routes/User.routes");
+const { DoctorRouter } = require("./Backend/Routes/doctor.routes");
+
 require('dotenv').config();
 
 const app=express();
@@ -8,6 +11,8 @@ const app=express();
 app.use(express.json());
 app.use(CORS());
 
+app.use('/user', UserRouter)
+app.use('/doctor', DoctorRouter)
 
 app.get('/', (req,res) => {
     res.send({
